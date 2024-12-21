@@ -8,7 +8,33 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<script src="index.js"></script>
+		<script>
+		    const sounds = {
+  alt: {
+    url: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
+  },
+  bas: {
+    url: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
+  },
+  sopraan: {
+    url: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
+  },
+  tenor: {
+    url: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
+  },
+  total: {
+    url: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
+  }
+};
+
+const membershipEl = document.querySelector("#membership");
+const playerEl = document.querySelector("#player");
+
+playerEl.src = sounds[membershipEl.value].url;
+membershipEl.addEventListener("change", (e) => {
+  playerEl.src = sounds[e.target.value].url;
+});
+		</script>
 		<div class="container">
 			<div class="selector">
 				<label for="membership">Choose a membership plan:</label>
