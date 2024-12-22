@@ -1,13 +1,73 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+body {
+  background-color: #1E508B;
 }
 
-.selector {
-  display: flex;
+.albumTitle {
+  
 }
 
-audio {
-  max-width: 300px;
+audio
+{
+ width: calc(100% - 2px);
+-webkit-transition:all 0.25s linear;
+-moz-transition:all 0.25s linear;
+-o-transition:all 0.25s linear;
+transition:all 0.25s linear;
+-moz-box-shadow: 2px 2px 4px 0px rgba(0,0, 0, 0.4);
+-webkit-box-shadow:  2px 2px 4px 0 rgba(0,0, 0, 0.4);
+box-shadow: 2px 2px 4px 0 rgba(0,0, 0, 0.4);
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ;
+}
+
+audio:hover, audio:focus, audio:active
+{
+-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+transform: scale(1.05);
+}
+
+.playerWrap {
+  display: block;
+  margin: 10px auto 0;
+}
+
+#playprev {
+  margin: 0 -5px 0 0;
+}
+
+#playnext {
+  margin: 0 0 0 -5px;
+}
+
+#audioPanel {
+  width: 220px;
+  margin: 0;
+  padding: 10px;  
+  background-color: #dddddd;
+}
+
+#audioPanel select {
+  /* max-width: 660px;  for  below IE7 use `width: 660px;` */
+  width: calc(100% - 62px);
+  height: 21px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+#audioPanel option {
+	
+}
+
+.selected {
+	background-color:#ccc2a6;
+}
+#audioPanel option:active {
+	position:relative;
+	top:1px;
 }
