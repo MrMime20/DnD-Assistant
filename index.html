@@ -8,50 +8,44 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div class="container">
-			<div class="selector">
-				<label for="membership">Choose a membership plan:</label>
-				<select name="membership" id="membership">
-					<option value="alt">Alt</option>
-					<option value="bas">Bas</option>
-					<option value="sopraan" selected>Sopraan</option>
-					<option value="tenor">Tenor</option>
-					<option value="total">Total</option>
-				</select>
+		<div id="audioPanel">
+			<div class="albumTitle">
+				<h3 style="display: inline-block;">Finding Joy In Troubled Times</h3>
+				<a href="https://bit.ly/1VnuQPZ"><button style="display: inline-block; margin: 0 0 0 8px;"><i class="fa fa-download"></i></button></a>
 			</div>
-			<audio id="player" controls></audio>
+			<button id="playprev" class="playerBtn"><i class="fa fa-arrow-left"></i></button>
+			<select id="playlist">
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUQUJhQmVZNWNOa0U">1. Introduction</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUQUJhQmVZNWNOa0U">
+					2. Rinpoche
+					<audio controls></audio>
+					<p></ br>hsd sdfkhj sdfh k</p>
+				</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUQUJhQmVZNWNOa0U">3. Paloma</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUQUJhQmVZNWNOa0U">4. Rinpoche</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUQUJhQmVZNWNOa0U">5. Paloma</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">6. Rinpoche</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">7. Paloma</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">8. Rinpoche</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">9. Paloma</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">10. Rinpoche</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">11. Paloma</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">12. Rinpoche</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">13. Paloma</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">14. Rinpoche</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">15. Paloma</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">16. Rinpoche</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">17. Paloma</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">18. Rinpoche</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">19. Paloma</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">20. Rinpoche</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">21. Paloma</option>
+				<option data-mp3="https://docs.google.com/uc?export=download&id=0B2cLBXvhN6QUcVhLcjNsYnJ5b3M">22. Paloma & Rinpoche</option>
+			</select>
+			<button id="playnext" class="playerBtn"><i class="fa fa-arrow-right"></i></button>
+			<div id="playerWrap" class="playerWrap">
+				<audio id="audio" controls></audio>
+			</div>
 		</div>
-		<script>
-			const sounds = {
-			    alt: {
-			        url: "/Exploration Music (Chill).mp3"
-			    },
-			    bas: {
-			        url: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
-			    },
-			    sopraan: {
-			        url: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
-			    },
-			    tenor: {
-			        url: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
-			    },
-			    total: {
-			        url: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
-			    }
-			};
-			
-			const membershipEl = document.getElementById("membership"); 
-			const playerEl = document.getElementById("player"); 
-			
-			if (membershipEl && playerEl) { 
-			    playerEl.src = sounds[membershipEl.value].url; 
-			
-			    membershipEl.addEventListener("change", (e) => {
-			        playerEl.src = sounds[e.target.value].url;
-			    });
-			} else {
-			    console.error("Membership or Player element not found.");
-			}
-		</script>
 	</body>
 </html>
