@@ -4,38 +4,13 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>D&D Assistant</title>
+		<title>D&D DM Assistant</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div id="player">
-			<!-- (PART A) CURRENT SONG IMAGE -->
-			<img id="playImg" src="songs/loading.webp">
-			<!-- (PART B) CONTROLS -->
-			<div id="playControls">
-				<!-- (B1) SONG NAME -->
-				<div id="playName">Select A Song</div>
-				<!-- (B2) SONG TIME -->
-				<input id="playTimeR" type="range" value="0" min="0" disabled>
-				<div id="playTimeD">
-					<div id="playTimeN">0:00</div>
-					<div id="playTimeT">0:00</div>
-				</div>
-				<!-- (B3) LAST, PLAY/PAUSE, NEXT, VOLUME -->
-				<div id="playButtons">
-					<i id="playLast" class="icon-previous2"></i>
-					<i id="playTog" class="icon-pause2"></i>
-					<i id="playNext" class="icon-next2"></i>
-					<i id="playVolI" class="icon-volume-high"></i>
-					<input id="playVolR" type="range" min="0" max="1" step="0.1" value="1" disabled>
-				</div>
-			</div>
-			<!-- (PART C) PLAYLIST -->
-			<div id="playList">
-				<div data-src="guitar.mp3" data-img="guitar.webp">Guitar</div>
-				<div data-src="piano.mp3" data-img="piano.webp">Piano</div>
-				<div data-src="trombone.mp3" data-img="trombone.webp">Trombone</div>
-			</div>
-		</div>
+		<audio controls>
+			<source src="songs/Tense Music.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
 	</body>
 </html>
